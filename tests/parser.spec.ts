@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { NodeTypes, parser } from "../src/parser";
+import { parser } from "../src/parser";
 import { TokenType, Token } from "../src/tokenizer";
+import { NodeTypes } from "../src/ast";
 
 describe("parser", () => {
   it("parser", () => {
@@ -18,14 +19,14 @@ describe("parser", () => {
     ];
 
     const ast = {
-      type: NodeTypes.Root,
+      type: NodeTypes.Program,
       body: [
         {
           type: NodeTypes.CallExpression,
           name: "add",
           params: [
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "2",
             },
             {
@@ -33,11 +34,11 @@ describe("parser", () => {
               name: "subtract",
               params: [
                 {
-                  type: NodeTypes.Number,
+                  type: NodeTypes.NumberLiteral,
                   value: "4",
                 },
                 {
-                  type: NodeTypes.Number,
+                  type: NodeTypes.NumberLiteral,
                   value: "2",
                 },
               ],
@@ -58,10 +59,10 @@ describe("parser", () => {
       },
     ];
     const ast = {
-      type: NodeTypes.Root,
+      type: NodeTypes.Program,
       body: [
         {
-          type: NodeTypes.Number,
+          type: NodeTypes.NumberLiteral,
           value: "2",
         },
       ],
@@ -80,18 +81,18 @@ describe("parser", () => {
     ];
 
     const ast = {
-      type: NodeTypes.Root,
+      type: NodeTypes.Program,
       body: [
         {
           type: NodeTypes.CallExpression,
           name: "add",
           params: [
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "2",
             },
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "4",
             },
           ],
@@ -118,18 +119,18 @@ describe("parser", () => {
     ];
 
     const ast = {
-      type: NodeTypes.Root,
+      type: NodeTypes.Program,
       body: [
         {
           type: NodeTypes.CallExpression,
           name: "add",
           params: [
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "2",
             },
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "4",
             },
           ],
@@ -139,11 +140,11 @@ describe("parser", () => {
           name: "add",
           params: [
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "3",
             },
             {
-              type: NodeTypes.Number,
+              type: NodeTypes.NumberLiteral,
               value: "5",
             },
           ],
