@@ -10,6 +10,8 @@
 
 ## 5. code & compiler
 
+the-super-tiny-compiler: https://github.com/jamiebuilds/the-super-tiny-compiler
+
 AST Explorer: https://astexplorer.net/
 
 ![Alt text](./assets/compiler.jpg)
