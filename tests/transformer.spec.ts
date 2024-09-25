@@ -2,7 +2,7 @@ import { describe, expect, test } from "vitest";
 import { NodeTypes, RootNode, Node } from "../src/ast";
 import { transformer } from "../src/transformer";
 
-describe("Name of the group", () => {
+describe("transformer group", () => {
   test("transformer happy path", () => {
     const originalAST: RootNode = {
       type: NodeTypes.Program,
